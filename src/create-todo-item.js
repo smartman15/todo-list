@@ -5,28 +5,39 @@
 // change todo priority
 
 
-export function createTodoItem(){
-    let title, description, dueDate, priority;
-
-    const getTitle = () => title;
-    const setTitle = (value) =>{
-        title = value;
+export class TodoItem{
+    constructor(title, description, dueDate, priority){
+        this.title = title;
+        this.description = description;
+        this.dueDate = dueDate;
+        this.priority = priority;
     }
 
-    const getDesc = () => description;
-    const setDesc = (value) =>{
-        description = value;
+    get title(){
+        return this.title;
+    }
+    set title(value){
+        this.title = value;
     }
 
-    const getDueDate = () => dueDate;
-    const setDueDate = (value) =>{
-        dueDate = value;
+    get description(){
+        return this.description;
+    }
+    set description(value){
+        this.description = value;
     }
 
-    const getPriority = () => priority;
-    const setPriority = (value) =>{
-        priority = value;
+    get dueDate(){
+        return this.dueDate;
+    }
+    set dueDate(value){
+        this.dueDate = value;
     }
 
-    return {getTitle, setTitle, getDesc, setDesc, getDueDate, setDueDate, getPriority, setPriority};
+    get priority(){
+        return this.priority;
+    }
+    set priority(value){
+        this.priority = value;
+    }
 }
