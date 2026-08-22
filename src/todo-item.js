@@ -11,6 +11,7 @@ export class TodoItem{
         this.description = description;
         this.dueDate = dueDate;
         this.priority = priority;
+        this.complete = false; // todos are false by default
     }
 
     get title(){
@@ -40,4 +41,13 @@ export class TodoItem{
     set priority(value){
         this.priority = value;
     }
+
+    get complete(){
+        return this.complete;
+    }
+    set complete(value){
+        this.complete = value;
+    }
+
+    // toggle complete status
 }
