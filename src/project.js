@@ -5,3 +5,50 @@
 // has an array to contain todo items
 // show todo items on the surface (title, duedate, priority. color of project changes on priority)
 // show all todo items details (title, duedate, etc)
+
+export class Project{
+    constructor(name, priority){
+        this.name = name;
+        this.priority = priority;
+        this.items = [];
+    }
+
+    // getters and setters
+
+    // function to show all properties of all todo items
+    showItemsAll(){
+        // loop through array of todo items
+
+            // print title
+            // print description
+            // print duedate
+            // print priority
+            // print completion status
+            // print empty space (to differentiate between todo items)
+    }
+        
+
+    // function to show basic details of all todo items
+        // loop through array of todo items
+            // print title, duedate, priority
+    
+    
+    // function to add todo items
+    // parameters take in title, description, dueDate, priority
+        // create TodoItem class using parameter values
+        // insert into items array of Project
+
+    // function to remove todo items
+    // parameter takes in index of todo item
+        // remove TodoItem at index from array of Project
+
+    // function to edit name
+    // takes in string as parameter
+        // change name according to value of string
+        // print name changed
+
+    // function to edit priority
+    // takes in string as parameter
+        // change priority according to value of string
+        // print priority changed
+}
