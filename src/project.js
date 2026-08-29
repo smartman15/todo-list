@@ -16,7 +16,6 @@ export class Project{
     // getters and setters
 
     // function to show all properties of all todo items
-    showItemsAll(){
         // loop through array of todo items
 
             // print title
@@ -25,7 +24,7 @@ export class Project{
             // print priority
             // print completion status
             // print empty space (to differentiate between todo items)
-    }
+    
         
 
     // function to show basic details of all todo items
@@ -40,15 +39,24 @@ export class Project{
 
     // function to remove todo items
     // parameter takes in index of todo item
-        // remove TodoItem at index from array of Project
+        // if index is valid
+            // remove TodoItem at index from array of Project
 
-    // function to edit name
+        // else 
+            // print index invalid
+
+
+    // function to edit project name
     // takes in string as parameter
         // change name according to value of string
         // print name changed
 
-    // function to edit priority
-    // takes in string as parameter
-        // change priority according to value of string
-        // print priority changed
+    // function to switch priority (urgent/not urgent)
+        // if priority is urgent
+            // set priority to not urgent
+
+        // else if priority is not urgent
+            //set priority to urgent
+
+        // print priority changed to this.priority
 }
