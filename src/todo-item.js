@@ -7,46 +7,55 @@
 
 export class TodoItem{
     constructor(title, description, dueDate, priority){
-        this.title = title;
-        this.description = description;
-        this.dueDate = dueDate;
-        this.priority = priority;
-        this.complete = false; // todos are false by default
+        this.data = {
+            id: self.crypto.randomUUID(),
+            title: title,
+            description: description,
+            dueDate: dueDate,
+            priority: priority,
+            complete: false
+        }
+        // this.id = self.crypto.randomUUID();
+        // this.title = title;
+        // this.description = description;
+        // this.dueDate = dueDate;
+        // this.priority = priority;
+        // this.complete = false; // todos are false by default
     }
 
     get title(){
-        return this.title;
+        return this.data.title;
     }
     set title(value){
-        this.title = value;
+        this.data.title = value;
     }
 
     get description(){
-        return this.description;
+        return this.data.description;
     }
     set description(value){
-        this.description = value;
+        this.data.description = value;
     }
 
     get dueDate(){
-        return this.dueDate;
+        return this.data.dueDate;
     }
     set dueDate(value){
-        this.dueDate = value;
+        this.data.dueDate = value;
     }
 
     get priority(){
-        return this.priority;
+        return this.data.priority;
     }
     set priority(value){
-        this.priority = value;
+        this.data.priority = value;
     }
 
     get complete(){
-        return this.complete;
+        return this.data.complete;
     }
     set complete(value){
-        this.complete = value;
+        this.data.complete = value;
     }
 
     // toggle complete status
