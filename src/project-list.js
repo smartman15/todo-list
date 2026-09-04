@@ -39,7 +39,7 @@
 
     // function to remove project
     // function takes in index as parameter
-        // if index is valid
+        // if index is valid 
             // remove project at index i in array of project list
             // log success  
         
