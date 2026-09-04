@@ -23,6 +23,10 @@ export class TodoItem{
         // this.complete = false; // todos are false by default
     }
 
+    get id(){
+        return this.data.id;
+    }
+
     get title(){
         return this.data.title;
     }
