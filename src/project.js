@@ -148,20 +148,22 @@ export class Project{
             // print index invalid
     }
         
-
-
-    // function to edit project name
-    // takes in string as parameter
-        // change name according to value of string
-        // print name changed
+        
 
     // function to switch priority (urgent/not urgent)
+    switchPriority(){
+        let priority = this.data.priority;
         // if priority is urgent
+        if(priority === 'urgent') priority = 'not urgent';
             // set priority to not urgent
 
         // else if priority is not urgent
+        else priority = 'urgent';
             //set priority to urgent
 
         // print priority changed to this.priority
+        logMessage(`priority is now ${priority}`);
+    }
+        
 }
 
