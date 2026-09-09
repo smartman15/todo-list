@@ -101,6 +101,7 @@ export class Project{
         // loop through array of todo items
         let todos = this.data.items;
         for(let i = 0; i < todos.length; i++){
+            logMessage(`${i}.`);
             // print title, duedate, priority
             // print title
             logMessage(todos[i].title);
