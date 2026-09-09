@@ -58,8 +58,16 @@ const consoleInterface = (() => {
     }
 
     // 3. create new project
+    else if(option == 3){
         // ask user to input project name and priority
+        let projectName = prompt("Enter project name", "College");
+        let projectPriority = prompt("Enter project priority", "not urgent");
         // create Project with input values
+        let project = new Project(projectName, projectPriority);
+        // insert project into project list
+        project.getProjects().push(project);
+    }
+        
 
     // 4. add todo to project
         // ask user to input project index to choose which project to add todo
