@@ -15,6 +15,7 @@ const consoleInterface = (() => {
     if(option == 1){
         projectList.showProjectNames();
     }
+
     // 2. expand project to see/edit todos
     else if(option == 2){
         // input index of project
@@ -55,17 +56,35 @@ const consoleInterface = (() => {
                 // print index is invalid
         }
     }
+
+    // 3. create new project
+        // ask user to input project name and priority
+        // create Project with input values
+
+    // 4. add todo to project
+        // ask user to input project index to choose which project to add todo
+        // verify if index is valid
+            // create variable to store project at index
+            // ask user to input todo title, description, dueDate, priority
+            // create todo item with input values
+            // insert todo item into project variable
+
+
+    // 5. delete todo from project
+    else if(option == 5){
+        // ask index input from user
+        // use index as parameter value to remove todo item function from project.js
+        // if index is valid
+            // use remove project function from project-list
+
+        // else 
+            // print index is invalid
+    }
+    
 })();
 
 
 
 
 
-// 3. delete todo from project
-    // ask index input from user
-    // use index as parameter value to remove todo item function from project.js
-    // if index is valid
-        // use remove project function from project-list
 
-    // else 
-        // print index is invalid
