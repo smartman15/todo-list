@@ -24,6 +24,7 @@ export const projectList = (() => {
     const showProjectNames = () => {
         // loop through projects array
         for(let i = 0; i < projects.length; i++){
+            logMessage(`${i}.`);
             // print project name
             logMessage(`Project name: ${projects[i].name}`);
         }
@@ -41,7 +42,7 @@ export const projectList = (() => {
             logMessage(`${i}.  ${projects[i].name}  ${projects[i].priority}`);
             logMessage(`Details: `)
             // print basic details of todo items (title, duedate, priority)
-            projects[i].ShowBasicTodoDetail();
+            projects[i].showBasicTodoDetail();
         }
             
     }

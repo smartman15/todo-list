@@ -26,7 +26,7 @@ const consoleInterface = (() => {
             let project = projectList.getProjects()[index];
 
             // print todos of selected project
-            project.ShowBasicTodoDetail();
+            project.showBasicTodoDetail();
 
             // input index of todo
             let todoIdx = prompt("Insert index of todo to edit");
@@ -72,10 +72,31 @@ const consoleInterface = (() => {
 
     // 5. delete todo from project
     else if(option == 5){
-        // ask index input from user
-        // use index as parameter value to remove todo item function from project.js
+        // print all projects
+        projectList.showProjectNames();
+        // ask user to input project index
+        let projectIdx = prompt("Insert project index to delete todo from");
         // if index is valid
-            // use remove project function from project-list
+        if(isValidIndex(projectList.getProjects(), projectIdx)){
+            // create variable to store project at index
+            let project = projectList.getProjects()[projectIdx];
+            // print todo items of project variable
+            project.showBasicTodoDetail();
+            // ask user to input todo index to delete
+            let todoIdx = prompt("Insert index of todo to delete");
+            // if index is valid
+            if(isValidIndex(project.items, todoIdx)){
+                // use index as parameter value to remove todo item from project
+                project.removeTodo(todoIdx);
+            }
+                
+            
+            // else
+            else logMessage("Invalid index");
+                // print index is invalid
+        }
+            
+            
 
         // else 
             // print index is invalid

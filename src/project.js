@@ -70,7 +70,7 @@ export class Project{
         const todos = this.data.items
         // loop through array of todo items
         for(let i = 0; i < todos.length; i++){
-
+            logMessage(`${i}.`);
             // print title
             logMessage(todos[i].title);
             // print description
@@ -92,7 +92,7 @@ export class Project{
         
 
     // function to show basic details of all todo items
-    ShowBasicTodoDetail(){
+    showBasicTodoDetail(){
         if(this.data.items.length == 0){
             logMessage("no todo items in this project");
             return;
