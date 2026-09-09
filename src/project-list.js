@@ -3,12 +3,14 @@ import logMessage from "./logger";
 import { Project } from "./project";
 
 // project list is where all projects are stored
-const projectList = (() => {
+export const projectList = (() => {
     // array to store projects
     let projects = [];
 
 
-    // function to create projec
+    const getProjects = () => projects;
+
+    // function to create project
     // takes in name, priority as parameters
     const createProject = (name, priority) => {
         // using project constructor, create project
@@ -95,6 +97,8 @@ const projectList = (() => {
         else logMessage("invalid index");
             // log invalid index
     }
+
+    return {getProjects, createProject, showProjectNames, showProjectDetails, showProjectTodos, editProject, removeProject}
         
 })();
     
