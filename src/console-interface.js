@@ -70,12 +70,28 @@ const consoleInterface = (() => {
         
 
     // 4. add todo to project
+    else if(option == 4){
         // ask user to input project index to choose which project to add todo
+        let projectIdx = prompt("Insert index of project to add todo to");
         // verify if index is valid
+        if(isValidIndex(projectList.getProjects(), projectIdx)){
             // create variable to store project at index
+            let project = projectList.getProjects()[projectIdx];
             // ask user to input todo title, description, dueDate, priority
+            let title = prompt("Insert title of todo", "water the plants");
+            let description = prompt("Insert description of todo", "water all plants that are in the garden");
+            let dueDate = prompt("Insert due date of todo");
+            let priority = prompt("Insert urgency of todo", "not urgent");
             // create todo item with input values
+            let todo = new TodoItem(title, description, dueDate, priority);
             // insert todo item into project variable
+            project.push(todo);
+        }
+        
+        else logMessage("Invalid index");
+            
+    }
+        
 
 
     // 5. delete todo from project
