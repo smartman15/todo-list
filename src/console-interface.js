@@ -1,6 +1,8 @@
-import isValidIndex from "./index-validator";
-import logMessage from "./logger";
-import { projectList } from "./project-list";
+import isValidIndex from "./index-validator.js";
+import logMessage from "./logger.js";
+import { projectList } from "./project-list.js";
+import { Project } from "./project.js";
+import { TodoItem } from "./todo-item.js";
 // print out all projects available, along with its todo items (title & dueDate)
 // there is one project by default
 
@@ -10,6 +12,13 @@ import { projectList } from "./project-list";
 // 3. delete todo from project
 export const consoleInterface = (() => {
     while (true){
+        logMessage("Options:");
+        logMessage("0. Exit");
+        logMessage("1. show projects");
+        logMessage("2. Edit project todos");
+        logMessage("3. Create new projects");
+        logMessage("4. Add todo to project");
+        logMessage("5. Delete todo from project");
         let option = prompt('please enter option number', 1);
 
         // 0. exit
@@ -72,7 +81,7 @@ export const consoleInterface = (() => {
             // create Project with input values
             let project = new Project(projectName, projectPriority);
             // insert project into project list
-            project.getProjects().push(project);
+            projectList.getProjects().push(project);
         }
             
 
@@ -90,9 +99,9 @@ export const consoleInterface = (() => {
                 let dueDate = prompt("Insert due date of todo");
                 let priority = prompt("Insert urgency of todo", "not urgent");
                 // create todo item with input values
-                let todo = new TodoItem(title, description, dueDate, priority);
+                // let todo = new TodoItem(title, description, dueDate, priority);
                 // insert todo item into project variable
-                project.push(todo);
+                project.addTodo(title, description, dueDate, priority);
             }
 
             else logMessage("Invalid index");
