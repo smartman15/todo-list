@@ -1,1 +1,3 @@
-import { createTodoItem } from "./create-todo-item";
+import { consoleInterface } from "./console-interface.js";
+
+consoleInterface();
