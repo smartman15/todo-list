@@ -8,7 +8,7 @@ import { projectList } from "./project-list";
 // 1. show projects (print projects out using projectList function)
 // 2. expand project to see/edit todos
 // 3. delete todo from project
-const consoleInterface = (() => {
+export const consoleInterface = (() => {
     let option = prompt('please enter option number', 1);
 
     // 1. show projects (print projects out using projectList function)
@@ -87,7 +87,7 @@ const consoleInterface = (() => {
             // insert todo item into project variable
             project.push(todo);
         }
-        
+
         else logMessage("Invalid index");
             
     }
@@ -123,6 +123,7 @@ const consoleInterface = (() => {
             
 
         // else 
+        else logMessage("Invalid index");
             // print index is invalid
     }
     
