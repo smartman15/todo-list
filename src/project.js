@@ -6,10 +6,10 @@
 // show todo items on the surface (title, duedate, priority. color of project changes on priority)
 // show all todo items details (title, duedate, etc)
 
-import isValidIndex from "./index-validator";
-import logMessage from "./logger";
-import { TodoItem } from "./todo-item";
-import { storageAvailable } from "./web-storage-api";
+import isValidIndex from "./index-validator.js";
+import logMessage from "./logger.js";
+import { TodoItem } from "./todo-item.js";
+import { storageAvailable } from "./web-storage-api.js";
 
 export class Project{
     constructor(name, priority){
