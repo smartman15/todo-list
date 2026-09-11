@@ -1,6 +1,6 @@
-import isValidIndex from "./index-validator";
-import logMessage from "./logger";
-import { Project } from "./project";
+import isValidIndex from "./index-validator.js";
+import logMessage from "./logger.js";
+import { Project } from "./project.js";
 
 // project list is where all projects are stored
 export const projectList = (() => {
