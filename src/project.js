@@ -13,7 +13,7 @@ import { storageAvailable } from "./web-storage-api.js";
 
 export class Project{
     constructor(name, priority){
-        this.data = {
+        this._data = {
             id: self.crypto.randomUUID(),
             name: name,
             priority: priority,
@@ -31,11 +31,11 @@ export class Project{
     }
 
     get data(){
-        return this.data;
+        return this._data;
     }
 
     set data(value){
-        this.data = value;
+        this._data = value;
     }
 
     get name(){

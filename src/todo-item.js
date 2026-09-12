@@ -7,7 +7,7 @@
 
 export class TodoItem{
     constructor(title, description, dueDate, priority){
-        this.data = {
+        this._data = {
             id: self.crypto.randomUUID(),
             title: title,
             description: description,
@@ -25,6 +25,13 @@ export class TodoItem{
 
     get id(){
         return this.data.id;
+    }
+
+    get data(){
+        return this._data;
+    }
+    set data(value){
+        this._data = value;
     }
 
     get title(){
