@@ -30,6 +30,14 @@ export class Project{
         return this.data.id;
     }
 
+    get data(){
+        return this.data;
+    }
+
+    set data(value){
+        this.data = value;
+    }
+
     get name(){
         return this.data.name;
     }
