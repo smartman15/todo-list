@@ -35,9 +35,6 @@ export const jsonConverter = (() => {
         
 
 
-    
-
-
     // function convertToProject() to turn parsed json into Project Object
     const convertToProject = () => {
         // loop through projectList array
@@ -77,6 +74,8 @@ export const jsonConverter = (() => {
         } 
             
     }
+
+    return {storeLocalStorage, loadLocalStorage};
         
 })();
 
