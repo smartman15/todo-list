@@ -23,8 +23,14 @@ export const jsonConverter = (() => {
         // store into projectList array in code
         projectList.getProjects().push(JSON.parse(localStorage.getItem("array")));
         // execute convertToProject() function
+        convertToProject();
         // loop through projectList array
+        projectListArray = projectList.getProjects();
+        for(let i = 0; i < projectListArray.length; i++){
             // execute convertToTodo() and pass projectList array[i] as parameter value
+            convertToTodo(projectListArray[i]);
+        }
+            
     }
         
 
