@@ -5,7 +5,7 @@ import { Project } from "./project";
 import { projectList } from "./project-list"
 import { TodoItem } from "./todo-item";
 
-const jsonConverter = (() => {
+export const jsonConverter = (() => {
     // STORE IN LOCALSTORAGE
     const storeLocalStorage = () => {
         // take in projectList array
