@@ -35,9 +35,7 @@ export const jsonConverter = (() => {
         
 
 
-    // function to stringify projectList array and store into localStorage
-        // json stringify projectList array
-        // store into localStorage by using localStorage setItem() function
+    
 
 
     // function convertToProject() to turn parsed json into Project Object
