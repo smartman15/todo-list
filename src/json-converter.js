@@ -1,9 +1,9 @@
 // this module converts values to json and json back to their original values
 // the purpose of this is to be able to use localStorage API
 
-import { Project } from "./project";
-import { projectList } from "./project-list"
-import { TodoItem } from "./todo-item";
+import { Project } from "./project.js";
+import { projectList } from "./project-list.js"
+import { TodoItem } from "./todo-item.js";
 
 export const jsonConverter = (() => {
     // STORE IN LOCALSTORAGE
