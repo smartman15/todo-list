@@ -9,4 +9,5 @@ import { jsonConverter } from "./json-converter.js";
 // else 
     // execute consoleInterface()
 
+jsonConverter.loadLocalStorage();
 consoleInterface();
