@@ -3,6 +3,7 @@ import logMessage from "./logger.js";
 import { projectList } from "./project-list.js";
 import { Project } from "./project.js";
 import { TodoItem } from "./todo-item.js";
+import { jsonConverter } from "./json-converter.js";
 // print out all projects available, along with its todo items (title & dueDate)
 // there is one project by default
 
@@ -64,6 +65,7 @@ export const consoleInterface = (() => {
                     todo.priority = priority;
                     todo.complete = complete;
                     logMessage("Todo successfully updated");
+                    jsonConverter.storeLocalStorage();
                 }
                     
 
@@ -82,6 +84,7 @@ export const consoleInterface = (() => {
             let project = new Project(projectName, projectPriority);
             // insert project into project list
             projectList.getProjects().push(project);
+            jsonConverter.storeLocalStorage();
         }
             
 
@@ -102,6 +105,7 @@ export const consoleInterface = (() => {
                 // let todo = new TodoItem(title, description, dueDate, priority);
                 // insert todo item into project variable
                 project.addTodo(title, description, dueDate, priority);
+                jsonConverter.storeLocalStorage();
             }
 
             else logMessage("Invalid index");
@@ -128,6 +132,7 @@ export const consoleInterface = (() => {
                 if(isValidIndex(project.items, todoIdx)){
                     // use index as parameter value to remove todo item from project
                     project.removeTodo(todoIdx);
+                    jsonConverter.storeLocalStorage();
                 }
                     
                 
