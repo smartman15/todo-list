@@ -29,6 +29,9 @@ export class Project{
     get id(){
         return this.data.id;
     }
+    set id(value){
+        this.id = value;
+    }
 
     get data(){
         return this._data;
