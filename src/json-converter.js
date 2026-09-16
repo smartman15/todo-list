@@ -65,7 +65,7 @@ export const jsonConverter = (() => {
     // parameter takes in Project object
     const convertToTodo = (project) => {
         // for every todo element in Project items array
-        let projectItems = project.items;
+        let projectItems = project[0].items;
         for(let i = 0; i < projectItems.length; i++){
             // create jsonTodo variable
             // json.parse() the todo element and store it in jsonTodo variable
