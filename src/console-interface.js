@@ -12,7 +12,7 @@ import { jsonConverter } from "./json-converter.js";
 // 2. expand project to see/edit todos
 // 3. delete todo from project
 export const consoleInterface = (() => {
-    const startInterface = (() => {
+    const startInterface = () => {
         while (true){
             logMessage("Options:");
             logMessage("0. Exit");
@@ -149,7 +149,7 @@ export const consoleInterface = (() => {
                     // print index is invalid
             }
         }
-    })();
+    };
 
     
     
