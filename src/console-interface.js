@@ -177,7 +177,7 @@ export const consoleInterface = (() => {
                 let index = prompt("Insert index of project to delete");
                 // execute removeProject() of projectList
                 projectList.removeProject(index);
-
+                jsonConverter.storeLocalStorage();
             }
 
         }
