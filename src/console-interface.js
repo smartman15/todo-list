@@ -14,13 +14,15 @@ import { jsonConverter } from "./json-converter.js";
 export const consoleInterface = (() => {
     const startInterface = () => {
         while (true){
+            logMessage(" ");
             logMessage("Options:");
             logMessage("0. Exit");
             logMessage("1. show projects");
-            logMessage("2. Edit project todos");
-            logMessage("3. Create new projects");
-            logMessage("4. Add todo to project");
-            logMessage("5. Delete todo from project");
+            logMessage("2. Show todos");
+            logMessage("3. Edit project todos");
+            logMessage("4. Create new projects");
+            logMessage("5. Add todo to project");
+            logMessage("6. Delete todo from project");
             let option = prompt('please enter option number', 1);
     
             // 0. exit
@@ -33,9 +35,28 @@ export const consoleInterface = (() => {
             else if(option == 1){
                 projectList.showProjectNames();
             }
+
+            // 2. show todos )
+            else if(option == 2){
+                // ask index of which project the user would like to see the todos of
+                let index = prompt("Insert index of project");
+
+                // if index is valid
+                if(isValidIndex(projectList.getProjects(), index)){
+                    let project = projectList.getProjects()[index];
+                     // show todos of project
+                     project.ShowAllTodoDetail();
+                     
+                }
+                   
+                
+                // else
+                else logMessage("Invalid index");
+                    // print invalid index
+            }
     
             // 2. expand project to see/edit todos
-            else if(option == 2){
+            else if(option == 3){
                 // input index of project
                 let index = prompt("Insert index of project");
                 // verify if index is valid
@@ -77,7 +98,7 @@ export const consoleInterface = (() => {
             }
     
             // 3. create new project
-            else if(option == 3){
+            else if(option == 4){
                 // ask user to input project name and priority
                 let projectName = prompt("Enter project name", "College");
                 let projectPriority = prompt("Enter project priority", "not urgent");
@@ -90,7 +111,7 @@ export const consoleInterface = (() => {
                 
     
             // 4. add todo to project
-            else if(option == 4){
+            else if(option == 5){
                 // ask user to input project index to choose which project to add todo
                 let projectIdx = prompt("Insert index of project to add todo to");
                 // verify if index is valid
@@ -116,7 +137,7 @@ export const consoleInterface = (() => {
     
     
             // 5. delete todo from project
-            else if(option == 5){
+            else if(option == 6){
                 // print all projects
                 projectList.showProjectNames();
                 // ask user to input project index
@@ -152,7 +173,7 @@ export const consoleInterface = (() => {
     };
 
     
-    
+    return { startInterface }
     
 })();
 
