@@ -89,7 +89,7 @@ export const projectList = (() => {
     // function takes in index as parameter
     const removeProject = (index) => {
         // if index is valid 
-        if(isValidIndex(index)){
+        if(isValidIndex(projects, index)){
             // remove project at index i in array of project list
             projects.splice(index, 1);
             // log success
