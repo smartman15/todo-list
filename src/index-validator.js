@@ -1,5 +1,9 @@
 export default function isValidIndex(array, index){
-    if(index >= 0 && index < array.length){
+    if(index == ""){
+        return false;
+    }
+
+    else if(index >= 0 && index < array.length){
         return true;
     }
 
