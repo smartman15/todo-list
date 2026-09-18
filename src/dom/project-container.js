@@ -1,7 +1,7 @@
 import { projectList } from "../project-list.js";
 
 export function projectContainer(){
-    const container = document.querySelector('#content');
+    const contentDiv = document.querySelector('#content');
 
     const projectContainer = document.createElement('div');
 
@@ -17,6 +17,8 @@ export function projectContainer(){
 
     // get todo name
     // get todo deadline
+
+    contentDiv.appendChild(projectContainer);
 }
 
 
