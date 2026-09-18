@@ -21,7 +21,7 @@ export const jsonConverter = (() => {
         // take projectList array from localStorage
         // convert projectList array back to array of objects (use json parse())
         // store into projectList array in code
-        projectList.getProjects().push(JSON.parse(localStorage.getItem("array")));
+        projectList.setProjects(JSON.parse(localStorage.getItem("array") || "[]"));
         // execute convertToProject() function
         convertToProject();
         // loop through projectList array
@@ -39,7 +39,7 @@ export const jsonConverter = (() => {
     const convertToProject = () => {
         // loop through projectList array
         // for every project element in projectList array
-        let array = projectList.getProjects()[0];
+        let array = projectList.getProjects();
         for(let i = 0; i < array.length; i++){
             // create jsonProject variable
             // json.parse() the project element and assign it to jsonProject variable
@@ -65,7 +65,7 @@ export const jsonConverter = (() => {
     // parameter takes in Project object
     const convertToTodo = (project) => {
         // for every todo element in Project items array
-        let projectItems = project[0].items;
+        let projectItems = project.items;
         for(let i = 0; i < projectItems.length; i++){
             // create jsonTodo variable
             // json.parse() the todo element and store it in jsonTodo variable
