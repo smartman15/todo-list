@@ -23,6 +23,7 @@ export const consoleInterface = (() => {
             logMessage("4. Create new projects");
             logMessage("5. Add todo to project");
             logMessage("6. Delete todo from project");
+            logMessage("7. Delete project");
             let option = prompt('please enter option number', 1);
     
             // 0. exit
@@ -169,6 +170,16 @@ export const consoleInterface = (() => {
                 else logMessage("Invalid index");
                     // print index is invalid
             }
+
+            // 7. delete project
+            else if(option == 7){
+                // ask user to input index of project to delete
+                let index = prompt("Insert index of project to delete");
+                // execute removeProject() of projectList
+                projectList.removeProject(index);
+
+            }
+
         }
     };
 
