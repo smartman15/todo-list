@@ -9,6 +9,9 @@ export const projectList = (() => {
 
 
     const getProjects = () => projects;
+    const setProjects = (value) => {
+        projects = value;
+    }
 
     // function to create project
     // takes in name, priority as parameters
@@ -99,7 +102,7 @@ export const projectList = (() => {
             // log invalid index
     }
 
-    return {getProjects, createProject, showProjectNames, showProjectDetails, showProjectTodos, editProject, removeProject}
+    return {getProjects, setProjects,createProject, showProjectNames, showProjectDetails, showProjectTodos, editProject, removeProject}
         
 })();
     
