@@ -2,8 +2,8 @@ import { projectList } from "../project-list.js";
 
 export function projectContainer(){
     const contentDiv = document.querySelector('#content');
-
     const projectContainer = document.createElement('div');
+
 
     const projectDetails = document.createElement('div');
 
@@ -19,11 +19,10 @@ export function projectContainer(){
     projectPriority.textContent = project.priority;
     // display
     projectDetails.appendChild(projectPriority);
-
-    
     const todoHeader = document.createElement('div');
     todoHeader.textContent = 'items:';
-    projectContainer.appendChild(todoHeader);
+    projectDetails.appendChild(todoHeader);
+
 
     const todoContainer = document.createElement('div');
     let items = project.items
@@ -40,6 +39,9 @@ export function projectContainer(){
         // display name, dueDate
         todoContainer.appendChild(todoDuedate);
     }
+
+    projectContainer.appendChild(projectDetails);
+    projectContainer.appendChild(todoContainer);
     
 
     contentDiv.appendChild(projectContainer);
