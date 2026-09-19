@@ -2,6 +2,12 @@
     display: grid;
 }
 
-.project{
+.projectContainer{
+    background-color: lightblue;
     justify-items: center;
+}
+
+#content{
+    display: grid;
+    grid-auto-columns: 1fr;
 }
