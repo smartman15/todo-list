@@ -6,18 +6,20 @@ import { projectContainer } from "./dom/project-container.js";
 
 // load localStorage
 // if localStorage of projectList exists
-// if(localStorage.getItem("array")){
-//     // load localStorag
-//     jsonConverter.loadLocalStorage();
-//     // execute consoleInterface()
-//     consoleInterface.startInterface();
-// }
-// else{
-//     // execute consoleInterface()
-//     consoleInterface.startInterface();
-// }
+if(localStorage.getItem("array")){
+    // // load localStorage
+    // jsonConverter.loadLocalStorage();
+    // // execute consoleInterface()
+    // consoleInterface.startInterface();
+
+    jsonConverter.loadLocalStorage();
+    projectContainer();
+}
+else{
+    // execute consoleInterface()
+    projectContainer();
+}
     
-jsonConverter.loadLocalStorage();
-projectContainer();
+
     
 
