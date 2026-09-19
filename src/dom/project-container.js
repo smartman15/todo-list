@@ -14,13 +14,13 @@ export function projectContainer(){
         // get project name
         let project = projectList.getProjects()[i];
         const projectName = document.createElement('div');
-        projectName.textContent = project.name;
+        projectName.textContent = `Project: ${project.name}`;
         // display 
         projectDetails.appendChild(projectName);
 
         // get project priority
         const projectPriority = document.createElement('div');
-        projectPriority.textContent = project.priority;
+        projectPriority.textContent = `Priority: ${project.priority}`;
         // display
         projectDetails.appendChild(projectPriority);
         const todoHeader = document.createElement('div');
@@ -28,7 +28,7 @@ export function projectContainer(){
         projectDetails.appendChild(todoHeader);
 
 
-        const todoContainer = document.createElement('ul');
+        const todosContainer = document.createElement('ul');
         let items = project.items
         for(let j = 0; j < items.length; j++){
             let item = items[j];
@@ -37,20 +37,20 @@ export function projectContainer(){
             const itemContainer = document.createElement('li');
             // get todo title
             const todoTitle = document.createElement('div');
-            todoTitle.textContent = item.title;
+            todoTitle.textContent = `Title: ${item.title}`;
             itemContainer.appendChild(todoTitle);
 
             // get todo dueDate
             const todoDuedate = document.createElement('div');
-            todoDuedate.textContent = item.dueDate;
+            todoDuedate.textContent = `Due date: ${item.dueDate}`;
             // display name, dueDate
             itemContainer.appendChild(todoDuedate);
 
-            todoContainer.appendChild(itemContainer);
+            todosContainer.appendChild(itemContainer);
         }
 
         projectContainer.appendChild(projectDetails);
-        projectContainer.appendChild(todoContainer);
+        projectContainer.appendChild(todosContainer);
         
 
         contentDiv.appendChild(projectContainer);
