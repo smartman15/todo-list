@@ -5,35 +5,40 @@ export function projectContainer(){
 
     const projectContainer = document.createElement('div');
 
+    const projectDetails = document.createElement('div');
+
     // get project name
     let project = projectList.getProjects()[0];
-    let projectName = document.createElement('div');
+    const projectName = document.createElement('div');
     projectName.textContent = project.name;
     // display 
-    projectContainer.appendChild(projectName);
+    projectDetails.appendChild(projectName);
 
     // get project priority
-    let projectPriority = document.createElement('div');
+    const projectPriority = document.createElement('div');
     projectPriority.textContent = project.priority;
     // display
-    projectContainer.appendChild(projectPriority);
-    let todoHeader = document.createElement('div');
+    projectDetails.appendChild(projectPriority);
+
+    
+    const todoHeader = document.createElement('div');
     todoHeader.textContent = 'items:';
     projectContainer.appendChild(todoHeader);
 
+    const todoContainer = document.createElement('div');
     let items = project.items
     for(let i = 0; i < items.length; i++){
         let item = items[i];
         // get todo title
-        let todoTitle = document.createElement('div');
+        const todoTitle = document.createElement('div');
         todoTitle.textContent = item.title;
-        projectContainer.appendChild(todoTitle);
+        todoContainer.appendChild(todoTitle);
 
         // get todo dueDate
-        let todoDuedate = document.createElement('div');
+        const todoDuedate = document.createElement('div');
         todoDuedate.textContent = item.dueDate;
         // display name, dueDate
-        projectContainer.appendChild(todoDuedate);
+        todoContainer.appendChild(todoDuedate);
     }
     
 
