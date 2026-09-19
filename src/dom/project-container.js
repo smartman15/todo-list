@@ -24,17 +24,17 @@ export function projectContainer(){
     projectDetails.appendChild(todoHeader);
 
 
-    const todoContainer = document.createElement('div');
+    const todoContainer = document.createElement('li');
     let items = project.items
     for(let i = 0; i < items.length; i++){
         let item = items[i];
         // get todo title
-        const todoTitle = document.createElement('div');
+        const todoTitle = document.createElement('ul');
         todoTitle.textContent = item.title;
         todoContainer.appendChild(todoTitle);
 
         // get todo dueDate
-        const todoDuedate = document.createElement('div');
+        const todoDuedate = document.createElement('ul');
         todoDuedate.textContent = item.dueDate;
         // display name, dueDate
         todoContainer.appendChild(todoDuedate);
