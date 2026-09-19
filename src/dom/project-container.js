@@ -1,4 +1,5 @@
 import { projectList } from "../project-list.js";
+import { showTodoDetails } from "./show-todo-details.js";
 
 export function projectContainer(){
     const contentDiv = document.querySelector('#content');
@@ -47,21 +48,28 @@ export function projectContainer(){
             // display name, dueDate
             itemContainer.appendChild(todoDuedate);
 
+
+            // create container to store hidden todo details
+            const todoDetails = document.createElement('div');
+            todoDetails.classList.add('todo-details');
+            // on the press of button, show/hide details
+
             // get todo description
             const todoDesc = document.createElement('div');
             todoDesc.textContent = `Description: ${item.description}`;
-            itemContainer.appendChild(todoDesc);
+            todoDetails.appendChild(todoDesc);
 
             // get todo priority
             const todoPriority = document.createElement('div');
             todoPriority.textContent = `Priority: ${item.priority}`;
-            itemContainer.appendChild(todoPriority);
+            todoDetails.appendChild(todoPriority);
 
             // get todo completion status
             const todoCompletion = document.createElement('div');
             todoCompletion.textContent = `Complete: ${item.complete}`;
-            itemContainer.appendChild(todoCompletion);
+            todoDetails.appendChild(todoCompletion);
 
+            itemContainer.appendChild(todoDetails);
 
             todosContainer.appendChild(itemContainer);
 
@@ -70,6 +78,7 @@ export function projectContainer(){
             const showDetails = document.createElement('button');
             showDetails.classList.add('show-details');
             showDetails.textContent = 'Show Details';
+            showDetails.onclick = showTodoDetails(todoDetails);
             itemContainer.appendChild(showDetails);
         }
 
