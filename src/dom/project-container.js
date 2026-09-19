@@ -29,6 +29,7 @@ export function projectContainer(){
 
 
         const todosContainer = document.createElement('ul');
+        todosContainer.classList.add("todos-container");
         let items = project.items
         for(let j = 0; j < items.length; j++){
             let item = items[j];
@@ -47,6 +48,12 @@ export function projectContainer(){
             itemContainer.appendChild(todoDuedate);
 
             todosContainer.appendChild(itemContainer);
+
+            // create button to show details of todo element
+            // append to itemContainer
+            const showDetails = document.createElement('button');
+            showDetails.textContent = 'Show Details';
+            itemContainer.appendChild(showDetails);
         }
 
         projectContainer.appendChild(projectDetails);
