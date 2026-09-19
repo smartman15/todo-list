@@ -1,4 +1,5 @@
 import { consoleInterface } from "./console-interface.js";
+import "./styles.css"
 import { jsonConverter } from "./json-converter.js";
 import { projectContainer } from "./dom/project-container.js";
 
