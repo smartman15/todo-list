@@ -47,11 +47,28 @@ export function projectContainer(){
             // display name, dueDate
             itemContainer.appendChild(todoDuedate);
 
+            // get todo description
+            const todoDesc = document.createElement('div');
+            todoDesc.textContent = `Description: ${item.description}`;
+            itemContainer.appendChild(todoDesc);
+
+            // get todo priority
+            const todoPriority = document.createElement('div');
+            todoPriority.textContent = `Priority: ${item.priority}`;
+            itemContainer.appendChild(todoPriority);
+
+            // get todo completion status
+            const todoCompletion = document.createElement('div');
+            todoCompletion.textContent = `Complete: ${item.complete}`;
+            itemContainer.appendChild(todoCompletion);
+
+
             todosContainer.appendChild(itemContainer);
 
             // create button to show details of todo element
             // append to itemContainer
             const showDetails = document.createElement('button');
+            showDetails.classList.add('show-details');
             showDetails.textContent = 'Show Details';
             itemContainer.appendChild(showDetails);
         }
