@@ -28,16 +28,21 @@ export function projectContainer(){
     let items = project.items
     for(let i = 0; i < items.length; i++){
         let item = items[i];
+
+        // create container for individual item
+        const itemContainer = document.createElement('li');
         // get todo title
-        const todoTitle = document.createElement('li');
+        const todoTitle = document.createElement('div');
         todoTitle.textContent = item.title;
-        todoContainer.appendChild(todoTitle);
+        itemContainer.appendChild(todoTitle);
 
         // get todo dueDate
-        const todoDuedate = document.createElement('li');
+        const todoDuedate = document.createElement('div');
         todoDuedate.textContent = item.dueDate;
         // display name, dueDate
-        todoContainer.appendChild(todoDuedate);
+        itemContainer.appendChild(todoDuedate);
+
+        todoContainer.appendChild(itemContainer);
     }
 
     projectContainer.appendChild(projectDetails);
