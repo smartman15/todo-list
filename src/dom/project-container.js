@@ -3,6 +3,8 @@ import { projectList } from "../project-list.js";
 export function projectContainer(){
     const contentDiv = document.querySelector('#content');
     const projectContainer = document.createElement('div');
+    projectContainer.classList.add("grid");
+    projectContainer.classList.add("projectContainer");
 
 
     const projectDetails = document.createElement('div');
