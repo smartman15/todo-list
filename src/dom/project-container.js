@@ -78,7 +78,18 @@ export function projectContainer(){
             const showDetails = document.createElement('button');
             showDetails.classList.add('show-details');
             showDetails.textContent = 'Show Details';
-            showDetails.onclick = showTodoDetails(todoDetails);
+            showDetails.addEventListener("click", (e) => {
+                if(todoDetails.style.visibility === 'hidden'){
+                    // show todo details
+                    todoDetails.style.visibility = 'visible';
+                }
+                    
+                // else if todo details are visible
+                else{
+                // set todo details to hidden
+                    todoDetails.style.visibility = 'hidden'
+                }
+            });
             itemContainer.appendChild(showDetails);
         }
 
