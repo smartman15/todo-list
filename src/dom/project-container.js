@@ -7,7 +7,7 @@ export function projectContainer(){
     for(let i = 0; i < projectList.getProjects().length; i++){
         const projectContainer = document.createElement('div');
         projectContainer.classList.add("grid");
-        projectContainer.classList.add("projectContainer");
+        projectContainer.classList.add("project-container");
 
 
         const projectDetails = document.createElement('div');

@@ -6,12 +6,18 @@
     display: grid;
 }
 
-.projectContainer{
+.project-container{
     background-color: lightblue;
     justify-items: center;
+    gap: 10px;
 }
 
 #content{
     display: grid;
-    grid-auto-columns: 1fr;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.todos-container{
+    display: grid;
+    gap: 15px;
 }
