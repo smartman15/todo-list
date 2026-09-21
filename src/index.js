@@ -1,7 +1,8 @@
 import { consoleInterface } from "./console-interface.js";
 import "./styles.css"
 import { jsonConverter } from "./json-converter.js";
-import { projectContainer } from "./dom/project-container.js";
+import { loadProjects } from "./dom/project-container.js";
+import { createProject } from "./dom/create-project-btn.js";
 
 // localStorage.setItem("test", JSON.stringify(["what"]));
 
@@ -14,11 +15,13 @@ if(localStorage.getItem("array")){
     // consoleInterface.startInterface();
 
     jsonConverter.loadLocalStorage();
-    projectContainer();
+    loadProjects();
+    createProject();
 }
 else{
     // execute consoleInterface()
-    projectContainer();
+    loadProjects();
+    createProject();
 }
     
 

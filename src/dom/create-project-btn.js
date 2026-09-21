@@ -1,5 +1,5 @@
  import { consoleInterface } from "../console-interface.js";
- import { projectContainer } from "./project-container.js";
+ import { loadProjects } from "./project-container.js";
 
 export function createProject(){
     // get content div from template.html
@@ -9,5 +9,5 @@ export function createProject(){
     const createBtn = document.getElementById('create-project');
     createBtn.addEventListener("click", consoleInterface.createProject);
     
-    projectContainer();
+    loadProjects();
 }
