@@ -1,7 +1,7 @@
 import { projectList } from "../project-list.js";
 import { showTodoDetails } from "./show-todo-details.js";
 
-export function projectContainer(){
+export function loadProjects(){
     const contentDiv = document.querySelector('#content');
     
     for(let i = 0; i < projectList.getProjects().length; i++){
