@@ -77,17 +77,19 @@ export function projectContainer(){
             // append to itemContainer
             const showDetails = document.createElement('button');
             showDetails.classList.add('show-details');
-            showDetails.textContent = 'Show Details';
+            showDetails.textContent = 'Hide Details';
             showDetails.addEventListener("click", (e) => {
-                if(todoDetails.style.visibility === 'hidden'){
+                if(todoDetails.style.display === 'none'){
                     // show todo details
-                    todoDetails.style.visibility = 'visible';
+                    todoDetails.style.display = 'block';
+                    showDetails.textContent = 'Hide Details';
                 }
                     
                 // else if todo details are visible
                 else{
                 // set todo details to hidden
-                    todoDetails.style.visibility = 'hidden'
+                    todoDetails.style.display = 'none'
+                    showDetails.textContent = 'Show Details';
                 }
             });
             itemContainer.appendChild(showDetails);
