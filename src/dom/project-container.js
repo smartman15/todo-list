@@ -14,6 +14,11 @@ export function loadProjects(){
         const projectDetails = document.createElement('div');
         projectDetails.classList.add('project-details');
 
+
+        const projectIdx = document.createElement('div');
+        projectIdx.textContent = `${i}.`;
+        projectDetails.appendChild(projectIdx);
+
         // get project name
         let project = projectList.getProjects()[i];
         const projectName = document.createElement('div');
@@ -29,6 +34,8 @@ export function loadProjects(){
         const todoHeader = document.createElement('div');
         todoHeader.textContent = 'items:';
         projectDetails.appendChild(todoHeader);
+        const todoBtn = createTodoBtn();
+        projectDetails.appendChild(todoBtn);
 
 
         const todosContainer = document.createElement('ul');
