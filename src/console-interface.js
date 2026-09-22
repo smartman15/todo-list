@@ -220,7 +220,7 @@ export const consoleInterface = (() => {
     };
 
     
-    return { startInterface, createProject }
+    return { startInterface, createProject, createTodo, deleteProject }
     
 })();
 
