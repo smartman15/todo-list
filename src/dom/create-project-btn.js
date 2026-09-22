@@ -5,10 +5,12 @@ export function createProject(){
     // get content div from template.html
     const contentDiv = document.querySelector('#content');
 
-    const projectContainer = document.createElement('div');
     const createBtn = document.getElementById('create-project');
-    createBtn.addEventListener("click", consoleInterface.createProject);
+    createBtn.addEventListener("click", () => {
+        consoleInterface.createProject();
+        contentDiv.textContent = "";
+        loadProjects();
+    });
     
-    contentDiv.textContent = "";
-    loadProjects();
+    
 }
