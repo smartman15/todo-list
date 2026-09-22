@@ -43,6 +43,12 @@ export function loadProjects(){
 
             // create container for individual item
             const itemContainer = document.createElement('li');
+
+            const itemIdx = document.createElement('div');
+            itemIdx.textContent = `${j}.`;
+            itemContainer.appendChild(itemIdx);
+
+
             // get todo title
             const todoTitle = document.createElement('div');
             todoTitle.textContent = `Title: ${item.title}`;
