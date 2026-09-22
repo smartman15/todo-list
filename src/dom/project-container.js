@@ -1,6 +1,4 @@
 import { projectList } from "../project-list.js";
-import { showTodoDetails } from "./show-todo-details.js";
-import { createTodoBtn } from "./create-todo-btn.js";
 
 export function loadProjects(){
     const contentDiv = document.querySelector('#content');
@@ -34,8 +32,7 @@ export function loadProjects(){
         const todoHeader = document.createElement('div');
         todoHeader.textContent = 'items:';
         projectDetails.appendChild(todoHeader);
-        const todoBtn = createTodoBtn();
-        projectDetails.appendChild(todoBtn);
+        
 
 
         const todosContainer = document.createElement('ul');
