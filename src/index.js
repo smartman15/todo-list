@@ -4,6 +4,7 @@ import { jsonConverter } from "./json-converter.js";
 import { loadProjects } from "./dom/project-container.js";
 import { createProject } from "./dom/create-project-btn.js";
 import { createTodoBtn } from "./dom/create-todo-btn.js";
+import { deleteProject } from "./dom/delete-project-btn.js";
 
 // localStorage.setItem("test", JSON.stringify(["what"]));
 
@@ -26,4 +27,5 @@ else{
 
 
 createProject();
-
+deleteProject();
+createTodoBtn();
