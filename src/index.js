@@ -3,6 +3,7 @@ import "./styles.css"
 import { jsonConverter } from "./json-converter.js";
 import { loadProjects } from "./dom/project-container.js";
 import { createProject } from "./dom/create-project-btn.js";
+import { createTodoBtn } from "./dom/create-todo-btn.js";
 
 // localStorage.setItem("test", JSON.stringify(["what"]));
 
@@ -16,14 +17,13 @@ if(localStorage.getItem("array")){
 
     jsonConverter.loadLocalStorage();
     loadProjects();
-    createProject();
 }
 else{
     // execute consoleInterface()
     loadProjects();
-    createProject();
 }
     
 
-    
+
+createProject();
 
