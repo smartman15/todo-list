@@ -9,5 +9,6 @@ export function createProject(){
     const createBtn = document.getElementById('create-project');
     createBtn.addEventListener("click", consoleInterface.createProject);
     
+    contentDiv.textContent = "";
     loadProjects();
 }
