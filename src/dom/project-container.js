@@ -1,5 +1,6 @@
 import { projectList } from "../project-list.js";
 import { showTodoDetails } from "./show-todo-details.js";
+import { createTodoBtn } from "./create-todo-btn.js";
 
 export function loadProjects(){
     const contentDiv = document.querySelector('#content');
@@ -11,6 +12,7 @@ export function loadProjects(){
 
 
         const projectDetails = document.createElement('div');
+        projectDetails.classList.add('project-details');
 
         // get project name
         let project = projectList.getProjects()[i];
